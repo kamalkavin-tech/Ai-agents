@@ -1,0 +1,159 @@
+[
+  {
+    "case_id": "checkout-payment-timeout",
+    "service": "checkout-service",
+    "alert_message": "Error rate exceeded 5% threshold at 2026-08-19T22:20:00Z",
+    "expected": {
+      "root_cause_keywords": ["timeout", "3", "payment"],
+      "evidence_keywords": ["d9a3b45", "3000ms", "8.1"],
+      "required_tools": [
+        "get_recent_deploys",
+        "get_metrics",
+        "search_logs",
+        "get_git_diff",
+        "get_past_incidents"
+      ],
+      "similar_past_incident": "INC-0091",
+      "minimum_confidence": 0.8
+    }
+  },
+  {
+    "case_id": "inventory-rate-limit",
+    "service": "inventory-service",
+    "alert_message": "Error rate exceeded 5% threshold at 2026-08-19T19:06:00Z",
+    "expected": {
+      "root_cause_keywords": ["rate", "50"],
+      "evidence_keywords": ["g5n2p77", "RateLimitExceededError", "11.2"],
+      "required_tools": [
+        "get_recent_deploys",
+        "get_metrics",
+        "search_logs",
+        "get_git_diff",
+        "get_past_incidents"
+      ],
+      "similar_past_incident": "INC-0104",
+      "minimum_confidence": 0.8
+    }
+  },
+  {
+    "case_id": "catalog-db-pool-exhaustion",
+    "service": "catalog-service",
+    "alert_message": "Catalog error rate reached 14.2% at 2026-08-10T10:05:00Z; investigate database saturation",
+    "expected": {
+      "root_cause_keywords": ["pool", "8"],
+      "evidence_keywords": ["dbp001", "PoolTimeout", "100"],
+      "required_tools": ["get_metrics", "search_logs", "get_recent_deploys", "get_git_diff", "get_config_changes", "search_traces", "get_past_incidents"],
+      "similar_past_incident": "INC-0201",
+      "minimum_confidence": 0.8
+    }
+  },
+  {
+    "case_id": "recommendation-memory-leak",
+    "service": "recommendation-service",
+    "alert_message": "Recommendation pods restarted repeatedly as memory approached 2GB at 2026-08-11T08:05:00Z",
+    "expected": {
+      "root_cause_keywords": ["cache", "memory"],
+      "evidence_keywords": ["mem001", "OOMKilled", "1980"],
+      "required_tools": ["list_available_metrics", "get_metrics", "search_logs", "get_recent_deploys", "get_git_diff", "get_kubernetes_events", "get_past_incidents"],
+      "similar_past_incident": "INC-0202",
+      "minimum_confidence": 0.8
+    }
+  },
+  {
+    "case_id": "search-cpu-saturation",
+    "service": "search-service",
+    "alert_message": "Search p95 latency exceeded 5 seconds during a 12x traffic spike at 2026-08-12T14:05:00Z",
+    "expected": {
+      "root_cause_keywords": ["CPU", "traffic"],
+      "evidence_keywords": ["99", "maximum replica", "5100"],
+      "required_tools": ["list_available_metrics", "get_metrics", "search_logs", "get_kubernetes_events", "get_recent_deploys", "get_past_incidents"],
+      "similar_past_incident": "INC-0203",
+      "minimum_confidence": 0.75
+    }
+  },
+  {
+    "case_id": "order-upstream-timeout",
+    "service": "order-service",
+    "alert_message": "Order failures reached 12.4% at 2026-08-13T14:05:00Z around shipping quote calls",
+    "expected": {
+      "root_cause_keywords": ["500", "shipping", "timeout"],
+      "evidence_keywords": ["ord001", "840", "cfg-ord-001"],
+      "required_tools": ["get_metrics", "search_logs", "get_recent_deploys", "get_git_diff", "search_traces", "get_health_checks", "get_config_changes", "get_service_dependencies", "get_past_incidents"],
+      "similar_past_incident": "INC-0204",
+      "minimum_confidence": 0.8
+    }
+  },
+  {
+    "case_id": "user-schema-regression",
+    "service": "user-service",
+    "alert_message": "Profile update errors reached 18.7% immediately after deployment at 2026-08-14T16:15:00Z",
+    "expected": {
+      "root_cause_keywords": ["middle_name", "required"],
+      "evidence_keywords": ["usr001", "18.7", "null"],
+      "required_tools": ["get_metrics", "search_logs", "get_recent_deploys", "get_git_diff", "search_traces", "get_past_incidents"],
+      "similar_past_incident": "INC-0205",
+      "minimum_confidence": 0.8
+    }
+  },
+  {
+    "case_id": "notification-expired-certificate",
+    "service": "notification-service",
+    "alert_message": "Email delivery failures reached 35% at 2026-08-15T00:05:00Z while SMS remained healthy",
+    "expected": {
+      "root_cause_keywords": ["certificate", "expired"],
+      "evidence_keywords": ["2026-08-15T00:00:00Z", "734", "smtp.internal"],
+      "required_tools": ["get_metrics", "search_logs", "search_traces", "get_health_checks", "get_config_changes", "get_past_incidents"],
+      "similar_past_incident": "INC-0206",
+      "minimum_confidence": 0.85
+    }
+  },
+  {
+    "case_id": "media-disk-exhaustion",
+    "service": "media-service",
+    "alert_message": "Image upload processing errors reached 22.1% at 2026-08-16T09:05:00Z",
+    "expected": {
+      "root_cause_keywords": ["space", "temporary"],
+      "evidence_keywords": ["100", "no space left", "EvictionThresholdMet"],
+      "required_tools": ["list_available_metrics", "get_metrics", "search_logs", "get_kubernetes_events", "search_traces", "get_health_checks", "get_past_incidents"],
+      "similar_past_incident": "INC-0207",
+      "minimum_confidence": 0.85
+    }
+  },
+  {
+    "case_id": "fulfillment-queue-backlog",
+    "service": "fulfillment-service",
+    "alert_message": "Shipment event processing lag exceeded 10 minutes with queue depth 42000 at 2026-08-17T10:25:00Z",
+    "expected": {
+      "root_cause_keywords": ["consumer", "1"],
+      "evidence_keywords": ["ful001", "42000", "1100"],
+      "required_tools": ["list_available_metrics", "get_metrics", "search_logs", "get_recent_deploys", "get_git_diff", "get_kubernetes_events", "get_config_changes", "get_past_incidents"],
+      "similar_past_incident": "INC-0208",
+      "minimum_confidence": 0.8
+    }
+  },
+  {
+    "case_id": "auth-dns-failure",
+    "service": "auth-service",
+    "alert_message": "New session creation failures reached 41% at 2026-08-18T06:05:00Z",
+    "expected": {
+      "root_cause_keywords": ["DNS", "session-store-v2.internal"],
+      "evidence_keywords": ["dns001", "NXDOMAIN", "cfg-auth-001"],
+      "required_tools": ["get_metrics", "search_logs", "get_recent_deploys", "get_git_diff", "search_traces", "get_health_checks", "get_config_changes", "get_service_dependencies", "get_past_incidents"],
+      "similar_past_incident": "INC-0209",
+      "minimum_confidence": 0.85
+    }
+  },
+  {
+    "case_id": "pricing-insufficient-evidence",
+    "service": "pricing-service",
+    "alert_message": "Pricing p95 latency briefly increased to 310ms at 2026-08-19T11:05:00Z; determine the root cause",
+    "expected": {
+      "expected_status": "inconclusive",
+      "root_cause_keywords": [],
+      "evidence_keywords": ["310", "healthy"],
+      "required_tools": ["list_available_metrics", "get_metrics", "search_logs", "get_recent_deploys", "search_traces", "get_health_checks", "get_service_dependencies"],
+      "similar_past_incident": null,
+      "maximum_confidence": 0.6
+    }
+  }
+]

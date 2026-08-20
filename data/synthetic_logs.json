@@ -1,0 +1,40 @@
+[
+  {"timestamp":"2026-08-10T10:00:00Z","service":"catalog-service","level":"INFO","message":"Catalog request rate increased to 180 requests/sec"},
+  {"timestamp":"2026-08-10T10:03:11Z","service":"catalog-service","level":"ERROR","message":"PoolTimeout: database connection pool exhausted after 8 active connections"},
+  {"timestamp":"2026-08-10T10:05:20Z","service":"catalog-service","level":"ERROR","message":"PoolTimeout: failed to acquire database connection within 2 seconds"},
+
+  {"timestamp":"2026-08-11T08:01:00Z","service":"recommendation-service","level":"WARN","message":"Process resident memory exceeded 1800 MB"},
+  {"timestamp":"2026-08-11T08:04:20Z","service":"recommendation-service","level":"ERROR","message":"Worker terminated before completing recommendation request"},
+  {"timestamp":"2026-08-11T08:06:31Z","service":"recommendation-service","level":"ERROR","message":"Feature cache grew to 1.9 GB with no eviction"},
+
+  {"timestamp":"2026-08-12T14:00:00Z","service":"search-service","level":"WARN","message":"Search traffic reached 12 times normal request volume"},
+  {"timestamp":"2026-08-12T14:03:14Z","service":"search-service","level":"WARN","message":"Request queue delay exceeded 2 seconds while all CPU cores saturated"},
+  {"timestamp":"2026-08-12T14:05:52Z","service":"search-service","level":"ERROR","message":"Search request deadline exceeded after 5000ms"},
+
+  {"timestamp":"2026-08-13T14:01:03Z","service":"order-service","level":"ERROR","message":"UpstreamTimeout: shipping-service exceeded client timeout of 500ms"},
+  {"timestamp":"2026-08-13T14:03:19Z","service":"order-service","level":"ERROR","message":"Unable to quote shipping because upstream request timed out"},
+  {"timestamp":"2026-08-13T14:06:20Z","service":"order-service","level":"WARN","message":"Order creation failures isolated to shipping quote step"},
+
+  {"timestamp":"2026-08-14T16:10:10Z","service":"user-service","level":"ERROR","message":"ValidationError: middle_name field is required for existing profile user-4821"},
+  {"timestamp":"2026-08-14T16:11:42Z","service":"user-service","level":"ERROR","message":"Profile serialization failed because middle_name is null"},
+  {"timestamp":"2026-08-14T16:14:00Z","service":"user-service","level":"WARN","message":"Profile update error rate increased after version usr001"},
+
+  {"timestamp":"2026-08-15T00:00:03Z","service":"notification-service","level":"ERROR","message":"TLSHandshakeError: smtp.internal certificate expired at 2026-08-15T00:00:00Z"},
+  {"timestamp":"2026-08-15T00:02:40Z","service":"notification-service","level":"ERROR","message":"Email delivery failed during SMTP TLS negotiation"},
+  {"timestamp":"2026-08-15T00:05:12Z","service":"notification-service","level":"WARN","message":"Email backlog growing; SMS delivery remains healthy"},
+
+  {"timestamp":"2026-08-16T09:00:00Z","service":"media-service","level":"WARN","message":"Temporary volume usage reached 97 percent"},
+  {"timestamp":"2026-08-16T09:01:30Z","service":"media-service","level":"ERROR","message":"OSError: no space left on device while resizing image"},
+  {"timestamp":"2026-08-16T09:04:22Z","service":"media-service","level":"ERROR","message":"Upload processing failed writing /tmp/media-work"},
+
+  {"timestamp":"2026-08-17T10:20:00Z","service":"fulfillment-service","level":"WARN","message":"Shipment event consumer lag reached 42000 messages"},
+  {"timestamp":"2026-08-17T10:23:00Z","service":"fulfillment-service","level":"WARN","message":"Single consumer processing 190 messages/sec while arrivals are 1100/sec"},
+  {"timestamp":"2026-08-17T10:26:30Z","service":"fulfillment-service","level":"ERROR","message":"Shipment status update exceeded 10 minute processing SLO"},
+
+  {"timestamp":"2026-08-18T06:01:00Z","service":"auth-service","level":"ERROR","message":"NameResolutionError: session-store-v2.internal could not be resolved"},
+  {"timestamp":"2026-08-18T06:02:25Z","service":"auth-service","level":"ERROR","message":"Login failed because session store DNS lookup returned NXDOMAIN"},
+  {"timestamp":"2026-08-18T06:05:10Z","service":"auth-service","level":"WARN","message":"Token verification works but new session creation fails"},
+
+  {"timestamp":"2026-08-19T11:02:00Z","service":"pricing-service","level":"WARN","message":"A small subset of price requests exceeded latency SLO"},
+  {"timestamp":"2026-08-19T11:05:00Z","service":"pricing-service","level":"INFO","message":"Dependency health probes are currently successful"}
+]

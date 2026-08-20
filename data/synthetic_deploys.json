@@ -1,0 +1,12 @@
+[
+  {"commit_id":"dbp001","service":"catalog-service","timestamp":"2026-08-10T09:45:00Z","author":"maya.singh","message":"Reduce database connection pool from 40 to 8","files_changed":["config/database.yaml"]},
+  {"commit_id":"mem001","service":"recommendation-service","timestamp":"2026-08-11T07:30:00Z","author":"li.chen","message":"Cache full recommendation feature vectors in process","files_changed":["src/features/cache.py"]},
+  {"commit_id":"src001","service":"search-service","timestamp":"2026-08-09T12:00:00Z","author":"nina.patel","message":"Update search result labels","files_changed":["ui/resultLabels.ts"]},
+  {"commit_id":"ord001","service":"order-service","timestamp":"2026-08-13T13:50:00Z","author":"omar.khan","message":"Lower shipping-service client timeout to 500ms","files_changed":["config/clients.yaml"]},
+  {"commit_id":"usr001","service":"user-service","timestamp":"2026-08-14T16:05:00Z","author":"alex.roy","message":"Require middle_name during profile serialization","files_changed":["src/profile/serializer.py"]},
+  {"commit_id":"not001","service":"notification-service","timestamp":"2026-08-12T08:00:00Z","author":"sara.ali","message":"Update email templates","files_changed":["templates/order.html"]},
+  {"commit_id":"med001","service":"media-service","timestamp":"2026-08-08T11:20:00Z","author":"dev.kumar","message":"Add image format metrics","files_changed":["src/metrics.py"]},
+  {"commit_id":"ful001","service":"fulfillment-service","timestamp":"2026-08-17T10:10:00Z","author":"emma.joseph","message":"Set shipment consumer replicas from 6 to 1","files_changed":["deploy/consumer.yaml"]},
+  {"commit_id":"dns001","service":"auth-service","timestamp":"2026-08-18T05:55:00Z","author":"rahul.iyer","message":"Move session store to new internal DNS name","files_changed":["config/session-store.yaml"]},
+  {"commit_id":"pri001","service":"pricing-service","timestamp":"2026-08-18T18:00:00Z","author":"zoe.thomas","message":"Add currency symbol for reports","files_changed":["src/reports/currency.py"]}
+]

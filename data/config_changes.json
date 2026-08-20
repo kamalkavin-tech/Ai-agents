@@ -1,0 +1,8 @@
+[
+  {"change_id":"cfg-cat-001","timestamp":"2026-08-10T09:45:00Z","service":"catalog-service","key":"database.pool_size","old_value":"40","new_value":"8","actor":"deployment/dbp001"},
+  {"change_id":"cfg-src-001","timestamp":"2026-08-01T09:00:00Z","service":"search-service","key":"autoscaling.max_replicas","old_value":"10","new_value":"10","actor":"baseline"},
+  {"change_id":"cfg-ord-001","timestamp":"2026-08-13T13:50:00Z","service":"order-service","key":"shipping.timeout_ms","old_value":"2000","new_value":"500","actor":"deployment/ord001"},
+  {"change_id":"cfg-not-001","timestamp":"2026-08-15T00:00:00Z","service":"notification-service","key":"smtp.certificate_expiry","old_value":"2026-08-15T00:00:00Z","new_value":"expired","actor":"certificate-monitor"},
+  {"change_id":"cfg-ful-001","timestamp":"2026-08-17T10:10:00Z","service":"fulfillment-service","key":"shipment_consumer.replicas","old_value":"6","new_value":"1","actor":"deployment/ful001"},
+  {"change_id":"cfg-auth-001","timestamp":"2026-08-18T05:55:00Z","service":"auth-service","key":"session_store.hostname","old_value":"session-store.internal","new_value":"session-store-v2.internal","actor":"deployment/dns001"}
+]

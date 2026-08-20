@@ -1,0 +1,14 @@
+[
+  {"service":"catalog-service","owner":"commerce-platform","dependencies":["catalog-db","redis-cache"]},
+  {"service":"recommendation-service","owner":"personalization","dependencies":["feature-store"]},
+  {"service":"search-service","owner":"discovery","dependencies":["search-index"]},
+  {"service":"order-service","owner":"orders","dependencies":["shipping-service","inventory-service","payment-service"]},
+  {"service":"user-service","owner":"identity-profile","dependencies":["profile-db"]},
+  {"service":"notification-service","owner":"engagement","dependencies":["smtp.internal","sms-gateway"]},
+  {"service":"media-service","owner":"content-platform","dependencies":["object-storage","temporary-volume"]},
+  {"service":"fulfillment-service","owner":"logistics","dependencies":["shipment-queue","warehouse-service"]},
+  {"service":"auth-service","owner":"identity","dependencies":["session-store-v2.internal","identity-db"]},
+  {"service":"pricing-service","owner":"pricing","dependencies":["tax-service","promotion-service"]},
+  {"service":"checkout-service","owner":"checkout","dependencies":["payment-gateway","inventory-service"]},
+  {"service":"inventory-service","owner":"inventory","dependencies":["inventory-db"]}
+]

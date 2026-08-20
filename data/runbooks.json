@@ -1,0 +1,12 @@
+[
+  {"runbook_id":"RB-DB-POOL","service":"catalog-service","title":"Database pool saturation","content":"Compare active connections with configured pool size. Restore the approved pool size only after human approval."},
+  {"runbook_id":"RB-OOM","service":"recommendation-service","title":"Worker memory and OOMKilled","content":"Check Kubernetes OOMKilled events and memory trend. Bound caches before raising limits."},
+  {"runbook_id":"RB-CPU","service":"search-service","title":"Search CPU saturation","content":"Check traffic, CPU, HPA maximum, and queue latency. Scaling requires approval."},
+  {"runbook_id":"RB-UPSTREAM","service":"order-service","title":"Upstream timeout","content":"Compare client timeout with upstream latency and recent configuration changes."},
+  {"runbook_id":"RB-SCHEMA","service":"user-service","title":"Backward incompatible schema deployment","content":"Identify new required fields and test old records before an approval-gated rollback."},
+  {"runbook_id":"RB-CERT","service":"notification-service","title":"TLS certificate expiry","content":"Confirm endpoint and certificate expiry. Certificate replacement requires platform approval."},
+  {"runbook_id":"RB-DISK","service":"media-service","title":"Ephemeral storage exhaustion","content":"Confirm volume usage and no-space errors. Cleanup or resizing requires approval."},
+  {"runbook_id":"RB-QUEUE","service":"fulfillment-service","title":"Message queue backlog","content":"Compare arrival and consumer rates, lag, and replica changes."},
+  {"runbook_id":"RB-DNS","service":"auth-service","title":"Internal DNS resolution failure","content":"Confirm NXDOMAIN and compare hostname configuration with the service catalog."},
+  {"runbook_id":"RB-UNKNOWN","service":"pricing-service","title":"Insufficient telemetry","content":"Return inconclusive when available evidence does not distinguish plausible causes."}
+]

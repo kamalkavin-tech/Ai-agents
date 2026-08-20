@@ -1,0 +1,7 @@
+[
+  {"timestamp":"2026-08-11T08:04:21Z","service":"recommendation-service","type":"Warning","reason":"OOMKilled","resource":"pod/recommendation-7d9f","message":"Container exceeded 2048Mi memory limit"},
+  {"timestamp":"2026-08-11T08:08:40Z","service":"recommendation-service","type":"Warning","reason":"BackOff","resource":"pod/recommendation-7d9f","message":"Back-off restarting failed container"},
+  {"timestamp":"2026-08-12T14:04:00Z","service":"search-service","type":"Warning","reason":"FailedScaleUp","resource":"hpa/search","message":"Maximum replica count 10 reached"},
+  {"timestamp":"2026-08-16T09:01:30Z","service":"media-service","type":"Warning","reason":"EvictionThresholdMet","resource":"pod/media-55c8","message":"Ephemeral storage usage exceeded container limit"},
+  {"timestamp":"2026-08-17T10:10:30Z","service":"fulfillment-service","type":"Normal","reason":"ScalingReplicaSet","resource":"deployment/shipment-consumer","message":"Scaled replica set from 6 to 1"}
+]

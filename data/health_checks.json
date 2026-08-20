@@ -1,0 +1,12 @@
+[
+  {"timestamp":"2026-08-10T10:05:00Z","service":"catalog-service","target":"catalog-db","status":"degraded","latency_ms":2010,"detail":"Connection acquisition timed out; database process healthy"},
+  {"timestamp":"2026-08-11T08:05:00Z","service":"recommendation-service","target":"recommendation-service","status":"unhealthy","latency_ms":null,"detail":"Pod restarted during health probe"},
+  {"timestamp":"2026-08-12T14:05:00Z","service":"search-service","target":"search-service","status":"degraded","latency_ms":4980,"detail":"All replicas at CPU limit"},
+  {"timestamp":"2026-08-13T14:05:00Z","service":"order-service","target":"shipping-service","status":"healthy","latency_ms":840,"detail":"Healthy but slower than order client timeout"},
+  {"timestamp":"2026-08-14T16:15:00Z","service":"user-service","target":"profile-db","status":"healthy","latency_ms":12,"detail":"Database healthy; failures occur before write"},
+  {"timestamp":"2026-08-15T00:05:00Z","service":"notification-service","target":"smtp.internal","status":"unhealthy","latency_ms":1000,"detail":"TLS certificate expired"},
+  {"timestamp":"2026-08-16T09:05:00Z","service":"media-service","target":"temporary-volume","status":"unhealthy","latency_ms":null,"detail":"No writable space available"},
+  {"timestamp":"2026-08-17T10:25:00Z","service":"fulfillment-service","target":"shipment-queue","status":"degraded","latency_ms":640000,"detail":"Queue available; consumer throughput below arrival rate"},
+  {"timestamp":"2026-08-18T06:05:00Z","service":"auth-service","target":"session-store-v2.internal","status":"unhealthy","latency_ms":2000,"detail":"DNS returned NXDOMAIN"},
+  {"timestamp":"2026-08-19T11:05:00Z","service":"pricing-service","target":"tax-service","status":"healthy","latency_ms":180,"detail":"No failing dependency identified"}
+]
