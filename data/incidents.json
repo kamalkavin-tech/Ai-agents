@@ -1,0 +1,18 @@
+[
+  {
+    "incident_id": "INC-0091",
+    "service": "checkout-service",
+    "date": "2026-06-02",
+    "summary": "Payment gateway timeout errors after config change reduced timeout threshold too aggressively",
+    "root_cause": "Timeout value set below realistic gateway response time under load",
+    "resolution": "Reverted timeout config to previous value; added alert on timeout config changes"
+  },
+  {
+    "incident_id": "INC-0104",
+    "service": "checkout-service",
+    "date": "2026-07-15",
+    "summary": "Inventory check failures during flash sale traffic spike",
+    "root_cause": "Inventory service rate limit hit during high concurrent requests",
+    "resolution": "Added client-side retry with backoff; increased inventory service rate limit"
+  }
+]

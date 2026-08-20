@@ -1,0 +1,42 @@
+[
+  {
+    "commit_id": "a1f9c3d",
+    "service": "checkout-service",
+    "timestamp": "2026-08-17T09:15:00Z",
+    "author": "priya.nair",
+    "message": "Update logging format for order events",
+    "files_changed": ["src/logging/orderLogger.js"]
+  },
+  {
+    "commit_id": "b7e2a91",
+    "service": "checkout-service",
+    "timestamp": "2026-08-18T14:30:00Z",
+    "author": "arjun.mehta",
+    "message": "Add retry logic for inventory check",
+    "files_changed": ["src/services/inventoryClient.js"]
+  },
+  {
+    "commit_id": "c4d8f02",
+    "service": "checkout-service",
+    "timestamp": "2026-08-19T11:00:00Z",
+    "author": "priya.nair",
+    "message": "Minor UI copy fix on payment confirmation screen",
+    "files_changed": ["src/components/PaymentConfirmation.jsx"]
+  },
+  {
+    "commit_id": "d9a3b45",
+    "service": "checkout-service",
+    "timestamp": "2026-08-19T22:10:00Z",
+    "author": "raj.kumar",
+    "message": "Reduce payment gateway timeout from 30s to 3s for faster failover",
+    "files_changed": ["src/config/paymentGatewayConfig.js"]
+  },
+  {
+    "commit_id": "e1c7g88",
+    "service": "checkout-service",
+    "timestamp": "2026-08-20T08:45:00Z",
+    "author": "arjun.mehta",
+    "message": "Add unit tests for inventory retry logic",
+    "files_changed": ["tests/inventoryClient.test.js"]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  { "timestamp": "2026-08-19T20:05:12Z", "service": "checkout-service", "level": "INFO", "message": "Order ORD-10234 completed successfully" },
+  { "timestamp": "2026-08-19T21:12:44Z", "service": "checkout-service", "level": "INFO", "message": "Order ORD-10235 completed successfully" },
+  { "timestamp": "2026-08-19T21:58:03Z", "service": "checkout-service", "level": "INFO", "message": "Order ORD-10236 completed successfully" },
+
+  { "timestamp": "2026-08-19T22:14:07Z", "service": "checkout-service", "level": "ERROR", "message": "PaymentGatewayTimeoutError: request to payment-gateway exceeded 3000ms for order ORD-10237" },
+  { "timestamp": "2026-08-19T22:15:22Z", "service": "checkout-service", "level": "ERROR", "message": "PaymentGatewayTimeoutError: request to payment-gateway exceeded 3000ms for order ORD-10238" },
+  { "timestamp": "2026-08-19T22:16:51Z", "service": "checkout-service", "level": "WARN", "message": "Retrying payment for order ORD-10238 after timeout" },
+  { "timestamp": "2026-08-19T22:17:10Z", "service": "checkout-service", "level": "ERROR", "message": "PaymentGatewayTimeoutError: request to payment-gateway exceeded 3000ms for order ORD-10239" },
+  { "timestamp": "2026-08-19T22:19:34Z", "service": "checkout-service", "level": "ERROR", "message": "PaymentGatewayTimeoutError: request to payment-gateway exceeded 3000ms for order ORD-10240" },
+  { "timestamp": "2026-08-19T22:21:02Z", "service": "checkout-service", "level": "ERROR", "message": "PaymentGatewayTimeoutError: request to payment-gateway exceeded 3000ms for order ORD-10241" },
+  { "timestamp": "2026-08-19T22:23:47Z", "service": "checkout-service", "level": "WARN", "message": "Elevated error rate detected on payment confirmation step" },
+  { "timestamp": "2026-08-19T22:25:15Z", "service": "checkout-service", "level": "ERROR", "message": "PaymentGatewayTimeoutError: request to payment-gateway exceeded 3000ms for order ORD-10242" },
+  { "timestamp": "2026-08-19T22:27:38Z", "service": "checkout-service", "level": "ERROR", "message": "PaymentGatewayTimeoutError: request to payment-gateway exceeded 3000ms for order ORD-10243" },
+
+  { "timestamp": "2026-08-20T06:02:11Z", "service": "checkout-service", "level": "INFO", "message": "Order ORD-10260 completed successfully" },
+  { "timestamp": "2026-08-20T06:45:33Z", "service": "checkout-service", "level": "INFO", "message": "Order ORD-10261 completed successfully" }
+]
