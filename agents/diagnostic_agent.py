@@ -168,8 +168,8 @@ def run_diagnostic_agent(service: str, alert_message: str):
 
 if __name__ == "__main__":
     report = run_diagnostic_agent(
-        service="checkout-service",
-        alert_message="Error rate exceeded 5% threshold at 2026-08-19T22:25:00Z"
+        service="inventory-service",
+        alert_message="Error rate exceeded 5% threshold at 2026-08-19T19:06:00Z"
     )
     print("\n" + "=" * 60)
     print("FINAL REPORT")

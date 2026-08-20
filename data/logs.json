@@ -14,5 +14,18 @@
   { "timestamp": "2026-08-19T22:27:38Z", "service": "checkout-service", "level": "ERROR", "message": "PaymentGatewayTimeoutError: request to payment-gateway exceeded 3000ms for order ORD-10243" },
 
   { "timestamp": "2026-08-20T06:02:11Z", "service": "checkout-service", "level": "INFO", "message": "Order ORD-10260 completed successfully" },
-  { "timestamp": "2026-08-20T06:45:33Z", "service": "checkout-service", "level": "INFO", "message": "Order ORD-10261 completed successfully" }
+  { "timestamp": "2026-08-20T06:45:33Z", "service": "checkout-service", "level": "INFO", "message": "Order ORD-10261 completed successfully" },
+
+  { "timestamp": "2026-08-19T18:00:00Z", "service": "inventory-service", "level": "INFO", "message": "Stock check for SKU-4521 completed successfully" },
+  { "timestamp": "2026-08-19T18:45:00Z", "service": "inventory-service", "level": "INFO", "message": "Stock check for SKU-4522 completed successfully" },
+
+  { "timestamp": "2026-08-19T19:02:15Z", "service": "inventory-service", "level": "WARN", "message": "Flash sale traffic detected: request volume up 8x baseline" },
+  { "timestamp": "2026-08-19T19:03:41Z", "service": "inventory-service", "level": "ERROR", "message": "RateLimitExceededError: client checkout-service exceeded 50 req/min limit" },
+  { "timestamp": "2026-08-19T19:04:12Z", "service": "inventory-service", "level": "ERROR", "message": "RateLimitExceededError: client checkout-service exceeded 50 req/min limit" },
+  { "timestamp": "2026-08-19T19:05:03Z", "service": "inventory-service", "level": "ERROR", "message": "RateLimitExceededError: client checkout-service exceeded 50 req/min limit" },
+  { "timestamp": "2026-08-19T19:06:29Z", "service": "inventory-service", "level": "WARN", "message": "Stock check failures cascading to checkout-service" },
+  { "timestamp": "2026-08-19T19:07:55Z", "service": "inventory-service", "level": "ERROR", "message": "RateLimitExceededError: client checkout-service exceeded 50 req/min limit" },
+  { "timestamp": "2026-08-19T19:09:14Z", "service": "inventory-service", "level": "ERROR", "message": "RateLimitExceededError: client checkout-service exceeded 50 req/min limit" },
+
+  { "timestamp": "2026-08-20T07:00:00Z", "service": "inventory-service", "level": "INFO", "message": "Stock check for SKU-4530 completed successfully" }
 ]
